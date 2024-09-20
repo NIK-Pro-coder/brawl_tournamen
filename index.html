@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<script src="js/main.js"></script>
+		<script>
+			reset();
+		</script>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<label for="ptag">Player Tag :</label><br />
+		<input type="text" id="ptag" />
+		<button onclick="addPlayer()">Add</button>
+
+		<br />
+
+		<p class="hidden" id="error">Please input a tag</p>
+
+		<button onclick="loadPlayers()">Load Players</button>
+	</body>
+</html>
