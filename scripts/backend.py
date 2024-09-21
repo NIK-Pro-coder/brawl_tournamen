@@ -20,6 +20,14 @@ def getPlayer(tag) :
 
 	print(r.text)
 
+#test club : #29GPQVJCR
+@addEntry
+def getClub(tag) :
+	url = f"https://api.brawlstars.com/v1/clubs/%23{tag.strip('#')}/members"
+	r = requests.get(url, headers=HEAD)
+
+	print(r.text)
+
 if __name__=="__main__" :
 	cmd = sys.argv[1]
 	inputs = sys.argv[2:]

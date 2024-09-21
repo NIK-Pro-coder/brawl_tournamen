@@ -3,7 +3,7 @@
 	display: none;
 }
 
-#error {
+.error {
 	color: red;
 	font-weight: bold;
 }

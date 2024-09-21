@@ -7,14 +7,32 @@
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
-		<label for="ptag">Player Tag :</label><br />
-		<input type="text" id="ptag" />
-		<button onclick="addPlayer()">Add</button>
+		<div>
+			<h2>Add Player</h2>
 
-		<br />
+			<div>
+				<label for="ptag">Player Tag :</label><br />
+				<input type="text" id="ptag" />
+				<button onclick="addPlayer()">Add</button>
+				<br />
 
-		<p class="hidden" id="error">Please input a tag</p>
+				<label for="ptag">Club Tag :</label><br />
+				<input type="text" id="ctag" />
+				<button onclick="addClub()">Add</button>
+				<br />
+				<p class="hidden error" id="tagError">
+					Please input a valid tag
+				</p>
+				<br />
+			</div>
+		</div>
 
-		<div id="playerList"></div>
+		<div>
+			<h2>Players :</h2>
+			<p class="hidden error" id="playerError">
+				Could not find player with tag "[tag]"
+			</p>
+			<div id="playerList"></div>
+		</div>
 	</body>
 </html>
