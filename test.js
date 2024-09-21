@@ -16,5 +16,3 @@ async function test() {
 
 	console.log(JSON.stringify(data, 2, null));
 }
-
-test();
