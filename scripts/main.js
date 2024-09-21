@@ -35,6 +35,7 @@ async function loadPlayer(tag) {
 
 	let p = document.createElement("p");
 	p.setAttribute("id", tag);
+	p.setAttribute("class", "player");
 	p.innerHTML = "Loading Player";
 
 	div.appendChild(p);
@@ -78,6 +79,9 @@ async function addClub() {
 
 	data.items.forEach((player) => {
 		let tag = player.tag.substring(1);
-		loadPlayer(tag);
+		if (!players.has(tag)) {
+			loadPlayer(tag);
+			players.add(tag);
+		}
 	});
 }

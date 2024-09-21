@@ -7,3 +7,13 @@
 	color: red;
 	font-weight: bold;
 }
+
+#playerList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.player {
+	flex-basis: 20%;
+}
