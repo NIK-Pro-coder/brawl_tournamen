@@ -32,27 +32,15 @@ app.get("/", function (req, res) {
 	res.send("index.html");
 });
 
-app.get("/getPlayer/:tag", function (req, res) {
-	const tag = req.params.tag;
-	runPythonScript("scripts/backend.py", ["getPlayer", tag], (err, result) => {
-		if (err) {
-			res.status(500).send(err);
-		} else {
-			res.send(JSON.parse(result));
-		}
-	});
+/*
+runPythonScript("scripts/backend.py", ["getClub", tag], (err, result) => {
+	if (err) {
+		res.status(500).send(err);
+	} else {
+		res.send(JSON.parse(result));
+	}
 });
-
-app.get("/getClub/:tag", function (req, res) {
-	const tag = req.params.tag;
-	runPythonScript("scripts/backend.py", ["getClub", tag], (err, result) => {
-		if (err) {
-			res.status(500).send(err);
-		} else {
-			res.send(JSON.parse(result));
-		}
-	});
-});
+*/
 
 const http = require("http").createServer(app);
 
